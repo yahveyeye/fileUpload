@@ -128,9 +128,9 @@ public class ImageController {
                 image.setThumbnailSize(thumbnailFile.length());
                 image = imageDao.create(image);
                 
-                image.setUrl("/picture/"+image.getId());
-                image.setThumbnailUrl("/thumbnail/"+image.getId());
-                image.setDeleteUrl("/delete/"+image.getId());
+                image.setUrl("picture/"+image.getId());
+                image.setThumbnailUrl("thumbnail/"+image.getId());
+                image.setDeleteUrl("delete/"+image.getId());
                 image.setDeleteType("DELETE");
                 
                 list.add(image);
