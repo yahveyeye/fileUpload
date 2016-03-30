@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="s"   uri="http://www.springframework.org/tags" %>
+<%@taglib prefix="spring"   uri="http://www.springframework.org/tags" %>
 <!DOCTYPE HTML>
 <!--
 /*
@@ -33,8 +33,9 @@
     <link rel="stylesheet" href="css/jquery.fileupload.css">
     <link rel="stylesheet" href="css/jquery.fileupload-ui.css">
     <!-- CSS adjustments for browsers with JavaScript disabled -->
-    <noscript><link rel="stylesheet" href="css/jquery.fileupload-noscript.css"></noscript>
-    <noscript><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"></noscript>
+     <link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+   <noscript>  <link rel="stylesheet" href="css/jquery.fileupload-noscript.css"> </noscript>
+   <noscript> <link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"> </noscript>
 </head>
 <body>
 <div class="navbar navbar-default navbar-fixed-top">
@@ -75,7 +76,7 @@
     </blockquote>
     <br>
     <!-- The file upload form used as target for the file upload widget -->
-    <form id="fileupload" action='<s:url value="/upload"/>' method="POST" enctype="multipart/form-data">
+    <form id="fileupload" action='<spring:url value="/upload"/>' method="POST" enctype="multipart/form-data">
         <!-- Redirect browsers with JavaScript disabled to the origin page -->
         <noscript><input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/"></noscript>
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
@@ -224,13 +225,13 @@
 <!-- The Templates plugin is included to render the upload/download listings -->
 <script src="http://blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
 <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-<script src="http://blueimp.github.io/JavaScript-Load-Image/js/load-image.min.js"></script>
+<script src="js/load-image.all.min.js"></script>
 <!-- The Canvas to Blob plugin is included for image resizing functionality -->
 <script src="http://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
 <!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <!-- blueimp Gallery script -->
-<script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="js/jquery.blueimp-gallery.min.js"></script>
 <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
 <script src="js/jquery.iframe-transport.js"></script>
 <!-- The basic File Upload plugin -->
